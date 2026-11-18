@@ -22,6 +22,7 @@ public class TaskManager {
     }
 
     
+    
     public boolean completeTask(Long id) {
 
         Task task = repository.findById(id).orElse(null);
@@ -37,19 +38,21 @@ public class TaskManager {
     }
 
 
-    public boolean removeTaskByNumber(int taskNumber) {
 
-        List<Task> tasks = getTasks();
-        int index = taskNumber - 1;
+    
+    public boolean removeTaskById(Long id) {
 
-        if (index >= 0 && index < tasks.size()) {
+        Task task = repository.findById(id).orElse(null);
 
-            repository.delete(tasks.get(index));
-            return true;
+        if (task == null) {
+            return false;
         }
 
-        return false;
+        repository.delete(task);
+
+        return true;
     }
+
 }
 
 

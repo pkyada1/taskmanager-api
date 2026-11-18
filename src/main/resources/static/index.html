@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+
+    <h1>My Task Manager</h1>
+    <p>Manage your daily tasks</p>
+
+    <h2>Add a New Task</h2>
+
+    <form id="taskForm">
+
+        <input type="text" id="title"
+               placeholder="Task Title" required>
+
+        <input type="text" id="description"
+               placeholder="Description" required>
+
+        <input type="date" id="dueDate" required>
+
+        <button type="button" id="addTaskButton">
+            Add Task
+        </button>
+
+    </form>
+
+    <h2>My Tasks</h2>
+
+    <div id="taskList">
+        <p>Your tasks will appear here.</p>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>

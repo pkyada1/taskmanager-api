@@ -1,0 +1,118 @@
+
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* Headings */
+h1 {
+    color: #2563eb;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Task input form */
+#taskForm {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+/* Input fields */
+input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: 2px solid #93c5fd;
+    border-color: #2563eb;
+}
+
+/* Buttons */
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+button:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+}
+
+/* Task list */
+#taskList {
+    display: grid;
+    gap: 15px;
+}
+
+/* Individual task cards */
+#taskList > div {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+#taskList h3 {
+    margin-top: 0;
+    color: #1f2937;
+}
+
+#taskList p {
+    color: #6b7280;
+}
+
+/* Space between task buttons */
+#taskList button {
+    margin-right: 8px;
+}
+
+/* Delete button */
+#taskList button:last-of-type {
+    background-color: #dc2626;
+}
+
+#taskList button:last-of-type:hover {
+    background-color: #b91c1c;
+}
+
+/* Smaller screens */
+@media (max-width: 600px) {
+    #taskForm {
+        grid-template-columns: 1fr;
+    }
+
+    body {
+        margin: 20px auto;
+    }
+}

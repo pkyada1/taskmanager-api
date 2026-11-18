@@ -42,7 +42,7 @@ public class TaskController {
 
     
     @PatchMapping("/tasks/{id}/complete")
-    public ResponseEntity<String> completeTask(
+        public ResponseEntity<String> completeTask(
         @PathVariable("id") Long id) {
 
         if (manager.completeTask(id)) {
@@ -53,16 +53,19 @@ public class TaskController {
     }
 
 
-    @DeleteMapping("/tasks/{taskNumber}")
-    public ResponseEntity<String> deleteTask(
-        @PathVariable int taskNumber) {
+    
+    @DeleteMapping("/tasks/{id}")
+        public ResponseEntity<String> deleteTask(
+        @PathVariable("id") Long id) {
 
-        if (manager.removeTaskByNumber(taskNumber)) {
+        if (manager.removeTaskById(id)) {
             return ResponseEntity.ok("Task successfully deleted!");
         }
 
         return ResponseEntity.status(404).body("Task not found.");
-        }
+    }
+
+
 }
 
 
